@@ -1,7 +1,7 @@
 {
-  "name": "com.phonegap.helloworld",
+  "name": "com.phonegap.Newly",
   "version": "1.0.0",
-  "displayName": "helloworld",
+  "displayName": "Newly",
   "cordova": {
     "platforms": [
       "android"
