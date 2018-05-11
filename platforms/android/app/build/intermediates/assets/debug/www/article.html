@@ -1,0 +1,243 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<title>Newly | Article</title>
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" type="text/css" href="styles/framework.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+</head>
+
+<body>
+<!-- Preloader -->
+<div id="preloader" class="preloader-bg">
+	<h1></h1>
+	<div id="preload-spinner"></div>
+	<p>Hunt the truth!</p>
+	<em>We will keep you informed</em>
+</div>
+
+<div id="page-transitions">
+
+	<!-- Header -->
+	<div id="header" class="header-home header-dark">
+		<a href="#" class="header-title back-button">Article</a>
+		<a href="home.html" class="header-icon back-button header-icon-1 font-10 no-border"><i class="fa fa-chevron-left"></i></a>
+	</div>
+
+	<!-- Reading bar -->
+	<div class="reading-bar"><div class="reading-line"></div></div>
+	
+	<div id="page-content" class="page-content">	
+		<div id="page-content-scroll">
+			
+			<div class="article-card article-full full-bottom">
+				<div class="article-header">
+					<span class="article-overlay"></span>
+					<img class="article-image" src="images/pictures/6lq.jpg"/>
+					<span class="article-category color-white bg-red-dark uppercase"></span>
+					<span class="article-author color-gray-light"><i class="fa fa-user opacity-50"></i></span>
+					<span class="article-time color-gray-light">15th April 2018<i class="fa fa-clock-o opacity-50"></i></span>
+				</div>
+			</div>
+			
+			<div class="content reading-time-box reading-words">
+				<h5 class="small-bottom ultrabold articleTitle">Photos are the art of 21th century.. Explore more about it</h5>
+				<a class="color-blue-dark font-12 small-bottom articleUrl">View original</a>
+				<p class="articleDesc"></p>
+
+				<h4 class="float-left">Share this article</h4>
+				<h4 class="float-right">Save</h4>
+				<br>
+				<div class="social-icons full-top half-bottom">
+					<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.newly.app/" class="icon icon-xs icon-circle facebook-bg"><i class="fa fa-facebook"></i></a>
+					<a target="_blank" href="https://twitter.com/home?status=Check%20out%20Newly%20http://www.newly.app" class="icon icon-xs icon-circle twitter-bg"><i class="fa fa-twitter"></i></a>
+					<a target="_blank" href="https://plus.google.com/share?url=http://www.newly.app" class="icon icon-xs icon-circle google-bg"><i class="fa fa-google-plus"></i></a>
+					<a target="_blank" href="http://pinterest.com/pin/create/button/?url=http://www.newly.app&media=www.newly.app&description=NewlyShareArticle" class="icon icon-xs icon-circle pinterest-bg"><i class="fa fa-pinterest-p"></i></a>
+					<a target="_blank" href="whatsapp://send" data-text="Check this out!" data-href="http://www.enableds.com" class="icon icon-xs icon-circle whatsapp-bg"><i class="fa fa-whatsapp"></i></a>
+					<a target="_blank" href="javascript:;" data-status="none" class="icon icon-xs float-right icon-circle google-bg saveArticle"><i class="fa fa-heart"></i></a>
+
+				</div>
+			</div>
+
+			<div class="decoration decoration-margins"></div>
+
+			<h5 class="uppercase bold half-top small-bottom center-text"><i class="fa fa-angellist color-blue-dark icon-clear-right"></i>Related articles</h5>
+			<div class="content content-boxed">
+				<div id="relatedNews" class="single-slider owl-carousel owl-no-dots">
+					<div class="related-news"></div>
+				</div>
+			</div>
+
+			<div class="decoration decoration-margins"></div>
+
+			<h5 class="uppercase bold half-top small-bottom center-text"><i class="fa fa-bullhorn color-blue-dark icon-clear-right"></i>Source</h5>
+			<div class="border-text border-blue pointer">
+				<h5 class="bold uppercase sourceName"></h5>
+				<p class="small-text-icon smaller-text no-bottom sourceUrl">
+					<i class="color-black fa fa-globe"></i>
+				</p>
+				<p class="no-bottom sourceDesc"> </p>
+				<a href="javascript:;" data-status="unblock" class="uppercase blockSource small-top float-left bold button-xs button-round button-red">Block</a>
+				<a href="javascript:;" data-status="unfollow" class="uppercase followSource float-right small-top bold button-xs button-round button-blue">Follow</a>
+			</div>
+
+			<div class="decoration decoration-margins"></div>
+
+			<h6 class="uppercase bold half-top small-bottom center-text"></i>More articles from this source</h6>
+			<div class="content content-boxed">
+				<div id="sourceNews" class="single-slider owl-carousel owl-no-dots">
+					<div class="related-news"></div>
+				</div>
+			</div>
+
+			<div class="decoration decoration-margins"></div>
+			<a href="#" class="back-button button button-xs button-full half-bottom button-blue ultrabold uppercase">Back to Home</a>
+
+			<!-- Footer -->
+			<div class="footer footer-dark">
+				<a href="#" class="footer-logo"></a>
+				<p>Hunt the truth! <br>All sources fetched from Newsapi.org</p>
+			</div>
+			
+		</div>  
+	</div>
+	<a href="#" class="back-to-top-badge back-to-top-small"><i class="fa fa-angle-up"></i>Back to Top</a>
+</div>
+	
+
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
+<script type="text/javascript" src="scripts/plugins.js"></script>
+
+
+<script>
+    /*
+
+        All news are loaded with ajax requests on Newsapi.org and are actual and original.
+        In success callback function is all content parsed in html.
+
+        Slider is initialized when news are ready and appended to html
+
+		We show real article and it's source
+    */
+
+    $(document).ready(function() {
+
+        //Related news to this article
+        $.ajax({
+			method: "GET",
+            url: "https://newsapi.org/v2/top-headlines?language=en&country=us&apiKey=cc078c1c3a974f6dac7177de0a89e7a5",
+            success: function (result) {
+                shuffle(result.articles);
+                result.articles.forEach(function (el) {
+                    if (el.urlToImage != null && result.articles.indexOf(el) < 6)
+                        $('#relatedNews').append(`<div class="related-news"><a href="article.html?title=${el.title}&desc=${el.description}&photo=${el.urlToImage}&src=${el.source.id}&cat=Breaking&url=${el.url}&time=${el.publishedAt.substring(0,10)}" class="related-news-image"><img src="${el.urlToImage}"></a><div class="store-slide-title"><strong>${el.title}</strong><em class="color-gray-dark">${el.description}</em></div><div class="store-slide-button"><strong>${el.source.name}</strong><a href="article.html?title=${el.title}&desc=${el.description}&photo=${el.urlToImage}&src=${el.source.id}&cat=Breaking&url=${el.url}&time=${el.publishedAt.substring(0,10)}"><i class="fa fa-arrow-right color-blue-light"></i>Read more</a></div></div>`);
+                });
+                $('#relatedNews').owlCarousel({loop: true, margin: 0, nav: false, autoHeight: true, items: 1, autoplay: true, autoplayTimeout: 3500});
+                $('#relatedNews').trigger('remove.owl.carousel', 0).trigger('refresh.owl.carousel');
+
+                setTimeout(function () {$("#preloader").addClass('hide-preloader');}, 250);
+                $('#preloader').addClass('hide-objects');
+                $('body').prepend('<div class="page-change-preloader preloader-bg"><div id="preload-spinner"></div></div>');
+
+            }
+        });
+
+        /*
+			Get source from this article - Source-id in "src" parameter from article
+			Then parse information about source and show more articles from this source
+    	*/
+        $.ajax({
+            method: "GET",
+            url: "https://newsapi.org/v2/sources?apiKey=cc078c1c3a974f6dac7177de0a89e7a5",
+            success: function (result) {
+                var source = false;
+                result.sources.forEach(function (el) {
+                    if (el.id == getParameterByName('src')) {
+                        source = el;
+					}
+                });
+
+				//Parse information about source
+                if(source){
+                    $('.article-author').html(source.name);
+                    $('.sourceName').html(source.name);
+                    $('.sourceUrl').append(source.url);
+                    $('.sourceDesc').html(source.description);
+
+
+                    //More news from this source
+                    $.ajax({
+                        method: "GET",
+                        url: "https://newsapi.org/v2/everything?sources="+ getParameterByName('src') +"&apiKey=cc078c1c3a974f6dac7177de0a89e7a5",
+                        success: function (result) {
+                            shuffle(result.articles);
+                            result.articles.forEach(function (el) {
+                                if (el.urlToImage != null && result.articles.indexOf(el) < 6)
+                                    $('#sourceNews').append(`<div class="related-news"><a href="article.html?title=${el.title}&desc=${el.description}&photo=${el.urlToImage}&src=${el.source.id}&cat=${el.source.name}&url=${el.url}&time=${el.publishedAt.substring(0,10)}" class="related-news-image"><img src="${el.urlToImage}"></a><div class="store-slide-title"><strong>${el.title}</strong><em class="color-gray-dark">${el.description}</em></div><div class="store-slide-button"><strong>${el.source.name}</strong><a href="article.html?title=${el.title}&desc=${el.description}&photo=${el.urlToImage}&src=${el.source.id}&cat=${el.source.name}&url=${el.url}&time=${el.publishedAt.substring(0,10)}"><i class="fa fa-arrow-right color-blue-light"></i>Read more</a></div></div>`);
+                            });
+                            $('#sourceNews').owlCarousel({loop: true, margin: 0, nav: false, autoHeight: true, items: 1, autoplay: true, autoplayTimeout: 3500});
+                            $('#sourceNews').trigger('remove.owl.carousel', 0).trigger('refresh.owl.carousel');
+                        }
+                    });
+				}
+            }
+        });
+
+        //Parse article information
+        $('.articleTitle').html(getParameterByName('title'));
+        $('.articleDesc').html(getParameterByName('desc'));
+        $('.article-image').attr('src', getParameterByName('photo'));
+        $('.article-category').html(getParameterByName('cat'));
+		$('.articleUrl').attr('href', getParameterByName('url'));
+		$('.article-time').html(getParameterByName('time'));
+
+        //Block button
+        $('.blockSource').click(function () {
+            if($(this).data('status')!='block'){
+                $(this).html("Unblock");
+                $(this).removeClass("button-red");
+                $(this).addClass("button-orange");
+                $(this).data('status','block');
+            } else {
+                $(this).data('status','unblock');
+                $(this).html("Block");
+                $(this).removeClass("button-orange");
+                $(this).addClass("button-red");
+            }
+        });
+
+        //Follow button
+        $('.followSource').click(function () {
+            if($(this).data('status')!='follow'){
+                $(this).html("Unfollow");
+                $(this).removeClass("button-blue");
+                $(this).addClass("button-green");
+                $(this).data('status','follow');
+            } else {
+                $(this).data('status','unfollow');
+                $(this).html("Follow");
+                $(this).removeClass("button-green");
+                $(this).addClass("button-blue");
+            }
+        });
+
+        //Save button
+        $('.saveArticle').click(function () {
+            if($(this).data('status')!='saved'){
+                $(this).html('<i class="fa fa-bookmark"></i>');
+                $(this).removeClass("google-bg");
+                $(this).addClass("facebook-bg");
+                $(this).data('status','saved');
+            } else {
+                $(this).data('status','none');
+                $(this).html('<i class="fa fa-heart"></i>');
+                $(this).removeClass("facebook-bg");
+                $(this).addClass("google-bg");
+            }
+		});
+    });
+</script>
+</body>
