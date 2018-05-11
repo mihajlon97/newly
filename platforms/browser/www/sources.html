@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<title>Newly | Sources</title>
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" type="text/css" href="styles/framework.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+</head>
+
+<body>
+<!-- Preloader -->
+<div id="preloader" class="preloader-bg">
+	<h1></h1>
+	<div id="preload-spinner"></div>
+	<p>Hunt the truth!</p>
+	<em>We will keep you informed</em>
+</div>
+	
+<div id="page-transitions">
+
+	<!-- Header -->
+	<div id="header" class="header-home header-dark">
+		<a href="#" class="header-title back-button">Sources</a>
+		<a href="home.html" class="header-icon back-button header-icon-1 font-10 no-border"><i class="fa fa-chevron-left"></i></a>
+	</div>
+
+	<!-- Reading bar -->
+	<div class="reading-bar"><div class="reading-line"></div></div>
+
+	<div id="page-content" class="page-content page-content-gray">
+		<div id="page-content-scroll">
+			<div id="sources">
+				<div class="decoration decoration-margins"></div>
+			</div>
+
+			<!-- Footer -->
+			<div class="footer footer-dark">
+				<a href="#" class="footer-logo"></a>
+				<p>Hunt the truth! <br>All sources fetched from Newsapi.org</p>
+			</div>
+
+		</div>
+	</div>
+</div>
+	<a href="#" class="back-to-top-badge back-to-top-small"><i class="fa fa-angle-up"></i>Back to Top</a>
+</div>
+
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
+<script type="text/javascript" src="scripts/plugins.js"></script>
+
+<script>
+
+    /*
+
+    	All availible sources from Newsapi.org
+
+     */
+
+    $(document).ready(function() {
+        $.ajax({
+            url: "https://newsapi.org/v2/sources?apiKey=cc078c1c3a974f6dac7177de0a89e7a5",
+            success: function(result){
+                result.sources.forEach(function (el) {
+					$('#sources').append(`<div class="border-text border-blue-dark pointer"><h5 class="bold uppercase">${el.name}</h5><p class="small-text-icon smaller-text no-bottom"><i class="color-black fa fa-globe"></i> ${el.url} </p><p class="no-bottom"> ${el.description} </p><a href="javascript:;" data-status="unblock" class="uppercase blockSource small-top float-left bold button-xs button-round button-red">Block</a><a href="javascript:;" data-status="unfollow" class="uppercase followSource float-right small-top bold button-xs button-round button-blue">Follow</a></div><div class="decoration decoration-margins"></div>`);
+                });
+
+				setTimeout(function(){$("#preloader").addClass('hide-preloader');},250);
+                $('#preloader').addClass('hide-objects');
+                $('body').prepend('<div class="page-change-preloader preloader-bg"><div id="preload-spinner"></div></div>');
+
+
+                $('.blockSource').click(function () {
+                    if($(this).data('status')!='block'){
+                        $(this).html("Unblock");
+                        $(this).removeClass("button-red");
+                        $(this).addClass("button-orange");
+                        $(this).data('status','block');
+					} else {
+                        $(this).data('status','unblock');
+                        $(this).html("Block");
+                        $(this).removeClass("button-orange");
+                        $(this).addClass("button-red");
+					}
+                });
+
+                $('.followSource').click(function () {
+                    if($(this).data('status')!='follow'){
+                        $(this).html("Unfollow");
+                        $(this).removeClass("button-blue");
+                        $(this).addClass("button-green");
+                        $(this).data('status','follow');
+                    } else {
+                        $(this).data('status','unfollow');
+                        $(this).html("Follow");
+                        $(this).removeClass("button-green");
+                        $(this).addClass("button-blue");
+                    }
+
+                });
+            }
+    	});
+	});
+
+</script>
+
+</body>

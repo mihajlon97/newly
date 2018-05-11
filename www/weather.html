@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<!-- Page taken from Mihajlo Nikodijevic - A3 - Yawa Weather App  -->
+<html>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+    <title>Newly | Weather</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="styles/framework.css">
+</head>
+
+<style>
+    p{color:#666666;}
+    p strong{color:#1f1f1f;}
+    a{color:#2980b9;}
+
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    html, body{
+        overflow-x:hidden!important;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        vertical-align: baseline;
+        outline: none;
+        font-size-adjust: none;
+        -webkit-text-size-adjust: none;
+        -moz-text-size-adjust: none;
+        -ms-text-size-adjust: none;
+        -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-font-smoothing: antialiased!important;
+        -webkit-transform: translate3d(1,1,1);
+        transform:translate3d(1,1,1);
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    *:focus {outline: none;}
+    *,*:after,*:before {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+
+    body{
+        margin: 0;
+        padding: 0;
+        overflow-x:hidden;
+        font-size:13px;
+        font-family:'Roboto', sans-serif;
+        line-height:30px;
+        font-weight:400;
+    }
+
+    ::selection {background-color:#CCC; color:#000;}
+    div, a, p, img, blockquote, form, fieldset, textarea, input, label, iframe, code, pre {
+        display: block;
+        position:relative;
+    }
+
+    textarea, input {outline: none;}
+
+    input{border-radius: 0!important; -webkit-border-radius:0px!important; display:inline-block;}
+    textarea{-webkit-appearance: none!important; border-radius: 0!important; -webkit-border-radius:0px!important;}
+    label a{display:inline-block;}
+
+
+    /*---Page Content Settings---*/
+
+    #page-transitions{left:0px; right:0px; display:block; overflow:hidden;}
+    #page-content{margin-bottom:0px; background-color:#FFFFFF;}
+
+    .ultrabold{font-weight:900!important;}
+    .uppercase{text-transform:uppercase;}
+    .center-text{text-align:center!important; display:block;}
+    .full-top{margin-top:30px!important; display:block;}
+    .content{margin:0px 20px 30px 20px;}
+
+
+    /*---Accordions---*/
+
+    .accordion a{
+        font-size:15px;
+        height:40px;
+        line-height:40px;
+        font-weight:500;
+    }
+
+    .accordion a i:last-child{
+        position:absolute;
+        right:-15px;
+        height:40px;
+        line-height:40px;
+        width:40px;
+        text-align:center;
+        transition:all 350ms ease;
+    }
+
+    .accordion a i:first-child{
+        height:100%;
+        width:40px;
+        text-align:center;
+        margin-left:-10px;
+    }
+
+    .accordion-content{display:none; overflow:hidden;}
+    .accordion-style a{height:180px;overflow: hidden; 	margin-bottom:5px;}
+
+
+
+    .text-highlight{margin-bottom:15px;}
+    .text-highlight span{
+        display:block;
+        float:left;
+        padding:0px 8px;
+        margin-right:5px;
+    }
+    .bg-yellow-dark{background-color: #F6BB42!important; color:#FFFFFF;}
+
+    .responsive-image{display:block; width:100%; margin-bottom:15px;}
+    .no-bottom{margin-bottom:0px!important;}
+    .small-text{font-size:12px!important; margin-top:-5px; display:block; line-height:24px;}
+    .color-blue-dark{color: #4A89DC!important;}
+    .half-bottom{margin-bottom:15px!important; display:block;}
+    .small-top{margin-top:10px!important; display:block;}
+    h1{ font-size:24px; line-height:26px; font-weight:500; margin-bottom:5px;}
+    .bg-green-light{background-color: #A0D468!important; color:#FFFFFF;}
+    .bg-blue-light{background-color: #5D9CEC!important; color:#FFFFFF;}
+
+    canvas{
+        width: 100% !important;
+        max-width: 800px;
+        height: auto !important;
+    }
+</style>
+
+<body>
+
+<div id="page-transitions">
+    <div id="header" class="header-home header-dark">
+        <a href="#" class="header-title back-button">Weather</a>
+        <a href="home.html" class="header-icon back-button header-icon-1 font-10 no-border"><i class="fa fa-chevron-left"></i></a>
+    </div>
+    <div class="page-content content">
+        <div class="accordion accordion-style">
+            <a href="#" data-accordion="accordion-1ab">
+                <p class="text-highlight"><span class="bg-yellow-dark">Vienna</span></p>
+                <img class="responsive-image" src="images/vienna.jpg">
+            </a>
+            <div class="accordion-content" id="accordion-1ab">
+                <div class="content-fullscreen">
+                    <h3 class="center-text uppercase ultrabold no-bottom"> Weather in Vienna </h3>
+                    <p class="center-text small-text color-blue-dark half-bottom small-top">Vienna is best city for living on the Earth!</p>
+                    <div class="content">
+                        <canvas class="chart" id="vienna-chart"/></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion accordion-style">
+            <a href="#" data-accordion="accordion-2ab">
+                <p class="text-highlight"><span class="bg-green-light">Cuprija</span></p>
+                <img class="responsive-image" src="images/cuprija.jpg">
+            </a>
+            <div class="accordion-content" id="accordion-2ab">
+                <div class="content-fullscreen">
+                    <h3 class="center-text uppercase ultrabold no-bottom"> Weather in Cuprija </h3>
+                    <p class="center-text small-text color-blue-dark half-bottom small-top">Cuprija is city in middle Serbia where author come from!</p>
+                    <div class="content">
+                        <canvas class="chart" id="cuprija-chart"/></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion accordion-style">
+            <a href="#" data-accordion="accordion-3ab">
+                <p class="text-highlight"><span class="bg-blue-light">Barcelona</span></p>
+                <img class="responsive-image" src="images/barcelona.jpg">
+            </a>
+            <div class="accordion-content" id="accordion-3ab">
+                <div class="content-fullscreen">
+                    <h3 class="center-text uppercase ultrabold no-bottom"> Weather in Barcelona </h3>
+                    <p class="center-text small-text color-blue-dark half-bottom small-top"> Barcelona is the most beautiful city on the Earth! </p>
+                    <div class="content">
+                        <canvas class="chart" id="barcelona-chart"/></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer footer-dark">
+            <a href="#" class="footer-logo"></a>
+            <p>Hunt the truth! <br>All sources fetched from Newsapi.org</p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="scripts/jquery.js"></script>
+
+<script type="text/javascript">
+    var app = {
+        // Application Constructor
+        initialize: function() {
+            this.bindEvents();
+        },
+        // Bind Event Listeners
+        bindEvents: function() {document.addEventListener('deviceready', this.onDeviceReady, false);},
+        // Device Ready Event Handler
+        onDeviceReady: function() {app.receivedEvent('deviceready');},
+        // Update DOM on a Received Event
+        receivedEvent: function(id) {
+            var parentElement = document.getElementById(id);
+            var listeningElement = parentElement.querySelector('.listening');
+            var receivedElement = parentElement.querySelector('.received');
+            listeningElement.setAttribute('style', 'display:none;');
+            receivedElement.setAttribute('style', 'display:block;');
+            //console.log('Received Event: ' + id);
+        }
+    };
+
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    function onDeviceReady(){if(window.MobileAccessibility){window.MobileAccessibility.usePreferredTextZoom(false);}}
+
+    $(document).ready(function(){
+        'use strict'
+        function init_template(){
+            //Accordions - Collapse Divs on Click
+            $('a[data-accordion]').on( "click", function(){
+                var accordion_number = $(this).data('accordion');
+                $('.accordion-content').slideUp(200);
+                $('.accordion i').removeClass('rotate-180');
+                if($('#'+accordion_number).is(":visible")){
+                    $('#'+accordion_number).slideUp(200);
+                    $(this).find('i:last-child').removeClass('rotate-180');
+                }else{
+                    $('#'+accordion_number).slideDown(200);
+                    $(this).find('i:last-child').addClass('rotate-180');
+                }
+            });
+
+
+
+            //ChartJS Customatisation and OpenWeatherApi Implementation and
+            if($('.chart').length > 0){
+                var loadJS = function(url, implementationCode, location){
+                    var scriptTag = document.createElement('script');
+                    scriptTag.src = url;
+                    scriptTag.onload = implementationCode;
+                    scriptTag.onreadystatechange = implementationCode;
+                    location.appendChild(scriptTag);
+                };
+                var call_charts_to_page = function(){
+                    var cities=['Vienna', 'Cuprija', 'Barcelona'];
+                    cities.forEach(function(city){
+                        $.ajax({
+                            //Init API URL with API Key and City Name
+                            url: "http://api.openweathermap.org/data/2.5/forecast?q="+city+"&appid=eedfc729a2ff4e66b91a3694f7cb41eb&units=metric",
+                            success: function(result){
+                                var date = new Date(result['list'][0]['dt_txt']);
+                                var dates=[], j=0, maxDailyTemps=[], minDailyTemps=[], avgDailyTemps=[], daysName=[];
+
+                                //Day in Week Variables for Under Label on Chart
+                                var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+                                dates[j]=[];
+                                /*
+                                    In bellow for loop all calculations for Min, Max and Averaged Temperatures are done
+
+                                    Implementation is done by following this steps for Each City (We are already in for loop for cities!):
+                                    1. For Each Date for API - Convert Date to JS Date Object
+                                    2. Check if the date is same as previous
+                                    3. Sort Max, Min and Average Temps in different array for spec date
+                                    4. Calculate Min, Max and Average for this day
+                                    5. Push it to final array
+                                    6. Do this for all different dates(By default 5 got from API)
+                                 */
+                                for(var i=0;i<result['list'].length;i++){
+                                    var tmpDate=new Date(result['list'][i]['dt_txt']);
+
+                                    //Check if Date is the same
+                                    if(date.getDate()==tmpDate.getDate()){
+                                        dates[j].push(result['list'][i]['main']);
+                                    }else{
+                                        //Convert each Date from API in Javascript Date Object
+                                        date = new Date(result['list'][i]['dt_txt']);
+                                        //Get Name of Dates! for example -> Monday, Tuesday ... and store it in array
+                                        daysName.push(days[date.getDay()]);
+                                        var maxTemps = [], minTemps = [], avgTemps = [];
+
+                                        //Push all current dates temps in different arrays to perform calculations on array
+                                        for(var k=0;k<dates[j].length;k++){
+                                            maxTemps.push(parseInt(Math.round(dates[j][k]['temp_max'])));
+                                            minTemps.push(parseInt(Math.round(dates[j][k]['temp_min'])));
+                                            avgTemps.push(parseInt(Math.round(dates[j][k]['temp'])));
+                                        }
+                                        dates[++j]=[];
+
+                                        //Calculate Max Temp for current date and push it to final array!
+                                        maxDailyTemps.push(maxTemps.reduce((max,n)=>n>max?n:max));
+
+                                        //Calculate Min Temp for current date and push it to final array!
+                                        minDailyTemps.push(minTemps.reduce((min,n)=>n<min?n:min));
+
+                                        //Calculate Average Temp for current date and push it to final array!
+                                        var average = arr => arr.reduce((p,c)=>p+c,0 ) / arr.length;
+                                        avgDailyTemps.push(average(avgTemps));
+
+                                        /*
+                                            For testing purposes only
+                                            console.log("Max: "); console.log(maxTemps);
+                                            console.log("MaxDaily: "); console.log(maxTemps.reduce((max, n) => n > max ? n : max));
+                                            console.log("Min: "); console.log(minTemps);
+                                            console.log("Avg: "); console.log(avgTemps);
+                                        */
+                                    }
+                                }
+
+                                //Append Data to Chart
+
+                                //User City Name for to get Html element
+                                new Chart(document.getElementById(city.toLowerCase()+"-chart"), {
+                                    type: 'line',
+                                    data: {
+                                        //Days Name for under label
+                                        labels: daysName,
+                                        //Assign Calculated Data for Temperatures
+                                        datasets: [{
+                                            data: maxDailyTemps, label: "Max Temperature", borderColor: "#D8334A"}, {
+                                            data: minDailyTemps, label: "Min Temperature", borderColor: "#4A89DC"}, {
+                                            data: avgDailyTemps, label: "Average Temperature", borderColor: "#f4ce42"}
+                                        ]
+                                    },
+                                    //Customatisation
+                                    options: {
+                                        legend: {display: true, position:'bottom', labels:{fontSize:13, padding:15,boxWidth:14},},
+                                        title: {display: false},
+                                        layout: {padding: {left: 0, right: 0, top: 10, bottom: 0}}
+                                    }
+                                });
+                                //console.log(result);
+                            }, error: function(xhr, status, error){
+                                //console.log(error);
+                            }
+                        });
+                    });
+                }
+                //Load Charts Plugin
+                loadJS('scripts/charts.js', call_charts_to_page, document.body);
+            }
+        }
+        setTimeout(init_template, 0);
+    });
+</script>
+<script type="text/javascript"> app.initialize(); </script>
+</body>
+</html>

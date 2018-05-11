@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+<title>Newly | Register</title>
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link rel="stylesheet" type="text/css" href="styles/framework.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="page-transitions">
+
+	<!-- Header -->
+	<div id="header" class="header-home header-dark">
+		<a href="#" class="header-title back-button">Sign Up</a>
+		<a href="home.html" class="header-icon back-button header-icon-1 font-10 no-border"><i class="fa fa-chevron-left"></i></a>
+	</div>
+	<div id="page-content" class="page-content page-content-gray">	
+		<div id="page-content-scroll" class="header-clear-larger">
+			<div class="page-login content-boxed content-boxed-padding no-top">
+				<h3 class="uppercase ultrabold full-top no-bottom">Register</h3>
+				<p class="smaller-text half-bottom">Register now to have better personalized content.</p>
+				<div class="page-login-field half-top">
+					<i class="fa fa-user-circle"></i>
+					<input type="text" placeholder="Type your name">
+					<em>(required)</em>
+				</div>
+				<div class="page-login-field">
+					<i class="fa fa-user"></i>
+					<input type="text" placeholder="Select a Username">
+					<em>(required)</em>
+				</div>
+				<div class="page-login-field">
+					<i class="fa fa-at"></i>
+					<input type="text" placeholder="Type your Email">
+					<em>(required)</em>
+				</div>
+				<div class="page-login-field">
+					<i class="fa fa-key"></i>
+					<input type="text" placeholder="Type your Password">
+					<em>(required)</em>
+				</div>
+				<div class="page-login-field">
+					<i class="fa fa-key"></i>
+					<input type="text" placeholder="Retype your Password">
+					<em>(required)</em>
+				</div>
+				<div>
+				<p class="full-top no-bottom smaller-text">Choose 3 favourite categories!</p>
+				<div class="one-half">
+					<div class="checkboxes-demo">
+						<div class="fac fac-checkbox fac-default"><span></span>
+							<input id="box1-fac-checkbox" type="checkbox" value="1" checked="">
+							<label for="box1-fac-checkbox">Tech</label>
+						</div>
+						<div class="fac fac-checkbox fac-default"><span></span>
+							<input id="box2-fac-checkbox" type="checkbox" value="1" checked="">
+							<label for="box2-fac-checkbox">Health</label>
+						</div>
+						<div class="fac fac-checkbox fac-default"><span></span>
+							<input id="box3-fac-checkbox" type="checkbox" value="1" checked="">
+							<label for="box3-fac-checkbox">Sport</label>
+						</div>
+						<div class="fac fac-checkbox fac-default"><span></span>
+							<input id="box4-fac-checkbox" type="checkbox" value="1" checked="">
+							<label for="box4-fac-checkbox">Politics</label>
+						</div>
+					</div>
+				</div>
+				<div class="one-half last-column">
+					<div class="checkboxes-demo">
+						<div class="fac fac-checkbox fac-default"><span></span>
+							<input id="box5-fac-checkbox" type="checkbox" value="1" checked="">
+							<label for="box5-fac-checkbox">Economy</label>
+						</div>
+						<div class="fac fac-checkbox fac-default"><span></span>
+							<input id="box6-fac-checkbox" type="checkbox" value="1" checked="">
+							<label for="box6-fac-checkbox">Style</label>
+						</div>
+						<div class="fac fac-checkbox fac-default"><span></span>
+							<input id="box7-fac-checkbox" type="checkbox" value="1" checked="">
+							<label for="box7-fac-checkbox">Science</label>
+						</div>
+						<div class="fac fac-checkbox fac-default"><span></span>
+							<input id="box8-fac-checkbox" type="checkbox" value="1" checked="">
+							<label for="box8-fac-checkbox">Crypto</label>
+						</div>
+					</div>
+				</div>
+
+                    <div style="margin-left:44px; text-align: center!important; display: inline-block;" class="page-login-links">
+                        <p class="center-text" href="#">Already registered? <a href="login.html">Sign in here<a></a></p>
+                        <div class="clear"></div>
+                    </div>
+                    <a href="home.html" class="button button-blue button-full button-rounded button-s uppercase ultrabold">Register Account</a>
+
+                    <p class="center-text no-bottom" href="#"><a href="home.html">Continue without account<a></a></p>
+			</div>
+			</div>
+			<div class="page-login half-bottom">
+				<div class="decoration opacity-50"></div>
+				<a href="#" class="button button-social half-bottom button-full button-sm button-rounded button-icon facebook-bg"><i class="fa fa-facebook"></i> Login with Facebook</a>
+				<a href="#" class="button button-social half-bottom button-full button-sm button-rounded button-icon twitter-bg"><i class="fa fa-twitter"></i> Login with Twitter</a>
+				<a href="#" class="button button-social half-bottom button-full button-sm button-rounded button-icon google-bg"><i class="fa fa-google-plus"></i> Login with Google Plus</a>
+			</div>
+
+			<!-- Footer -->
+			<div class="footer footer-dark">
+				<a href="#" class="footer-logo"></a>
+				<p>Hunt the truth! <br>All sources fetched from Newsapi.org</p>
+			</div>
+		</div>  
+	</div>
+	
+	<a href="#" class="back-to-top-badge back-to-top-small"><i class="fa fa-angle-up"></i>Back to Top</a>
+</div>
+	
+
+<script type="text/javascript" src="scripts/jquery.js"></script>
+<script type="text/javascript" src="scripts/custom.js"></script>
+<script type="text/javascript" src="scripts/plugins.js"></script>
+
+<script>
+    //3 Categories per default checked for demo purposes
+    $(document).ready(function() {
+        $('#box1-fac-checkbox').click();
+        $('#box2-fac-checkbox').click();
+        $('#box3-fac-checkbox').click();
+    });
+</script>
+</body>
