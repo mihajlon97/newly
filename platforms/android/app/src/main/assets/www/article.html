@@ -28,10 +28,10 @@
 
 	<!-- Reading bar -->
 	<div class="reading-bar"><div class="reading-line"></div></div>
-	
-	<div id="page-content" class="page-content">	
+
+	<div id="page-content" class="page-content">
 		<div id="page-content-scroll">
-			
+
 			<div class="article-card article-full full-bottom">
 				<div class="article-header">
 					<span class="article-overlay"></span>
@@ -41,7 +41,7 @@
 					<span class="article-time color-gray-light">15th April 2018<i class="fa fa-clock-o opacity-50"></i></span>
 				</div>
 			</div>
-			
+
 			<div class="content reading-time-box reading-words">
 				<h5 class="small-bottom ultrabold articleTitle">Photos are the art of 21th century.. Explore more about it</h5>
 				<a class="color-blue-dark font-12 small-bottom articleUrl">View original</a>
@@ -100,12 +100,12 @@
 				<a href="#" class="footer-logo"></a>
 				<p>Hunt the truth! <br>All sources fetched from Newsapi.org</p>
 			</div>
-			
-		</div>  
+
+		</div>
 	</div>
 	<a href="#" class="back-to-top-badge back-to-top-small"><i class="fa fa-angle-up"></i>Back to Top</a>
 </div>
-	
+
 
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
@@ -124,7 +124,8 @@
     */
 
     $(document).ready(function() {
-
+        var storage = window.localStorage;
+        console.log(storage.getItem('profile'));
         //Related news to this article
         $.ajax({
 			method: "GET",

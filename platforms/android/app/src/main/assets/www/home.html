@@ -17,14 +17,14 @@
 	<p>Hunt the truth!</p>
 	<em>We will keep you informed</em>
 </div>
-	
+
 <div id="page-transitions">
 	<!-- Header -->
 	<div id="header" class="header-home header-dark">
 		<a href="#" class="header-logo"></a>
 		<a href="javascript:;" class="header-icon header-icon-1 hamburger-animated" data-deploy-menu="menu-1"></a>
-		<a href="#" class="header-icon header-icon-2 font-14 " data-deploy-menu="menu-2"><i class="fa fa-search"></i></a>
-		<a href="profile.html" class="header-icon header-icon-4 font-14 no-border"><i class="fa fa-user"></i></a>
+		<a id="loop" href="#" class="header-icon header-icon-2 font-14 " data-deploy-menu="menu-2"><i class="fa fa-search"></i></a>
+		<a id="profile" href="profile.html" class="header-icon header-icon-4 font-14 no-border"><i class="fa fa-user"></i></a>
 	</div>
 
     <!-- Sidebar Menu-->
@@ -78,7 +78,7 @@
 		<div id="supriseMe">
 
 		</div>
-		<a href="javascript:;" class="close-text close-menu center-text">No, thank you!</a>
+		<a id="no-suprise" href="javascript:;" class="close-text close-menu center-text">No, thank you!</a>
 	</div>
 
 	<!-- Reading bar -->
@@ -197,6 +197,15 @@
     */
 
     $(document).ready(function() {
+        var storage = window.localStorage;
+        console.log(storage.getItem('profile'));
+		if(storage.getItem('profile') == 'false'){
+            $('#profile').hide();
+            $('#loop').removeClass('header-icon-2')
+            $('#loop').addClass('header-icon-4')
+		}
+
+
         //Get actual news in english from Newsapi.org - Main news slider
         $.ajax({
             url: "https://newsapi.org/v2/top-headlines?country=us&language=en&apiKey=cc078c1c3a974f6dac7177de0a89e7a5",
@@ -210,7 +219,7 @@
                     	$('#cover-news').append(`<div class="cover-item" style="background-image:url('${el.urlToImage}'); height: ${h}px; width: ${w}px;"><div class="cover-content cover-content-bottom"><span class="cover-tag bg-red-dark">Breaking</span><span class="cover-small-text opacity-40">${el.publishedAt.substring(0,10)}</span><h1 class="color-white left-text uppercase bold half-top no-bottom">${el.title}</h1><p class="color-white font-11 quarter-bottom"><a href="#"></a></p><p class="color-white left-text opacity-40 no-bottom">${el.description}</p><a href="#" class="half-top small-bottom font-12 color-gray-light float-left opacity-40">by ${el.source.name}</a><a href="${articleUrl}" class="half-top small-bottom font-12 color-blue-dark float-right">Read More<i class="fa fa-angle-right icon-clear-left"></i></a></div><div class="cover-overlay overlay overlay-gradient"></div></div>`);
                 });
 
-                $('.cover-slider').owlCarousel({loop:true, nav:false, items:1, autoplay: true, autoplayTimeout:3500});
+                $('.cover-slider').owlCarousel({loop:true, nav:false, items:1, autoplay: true, autoplayTimeout:5500});
                 $('.cover-slider').trigger('remove.owl.carousel', 0).trigger('refresh.owl.carousel');;
                 setTimeout(function(){$("#preloader").addClass('hide-preloader');},250);
                 $('#preloader').addClass('hide-objects');
@@ -258,6 +267,19 @@
             }
         });
 
+        $('#no-suprise').click(function () {
+            $.ajax({
+                url: "https://newsapi.org/v2/top-headlines?q=bitcoin&language=en&apiKey=cc078c1c3a974f6dac7177de0a89e7a5",
+                success: function(result){
+                    shuffle(result.articles);
+                    var articleUrl;
+                  	var el = result.articles[0];
+                    articleUrl = encodeURI(`article.html?title=${el.title}&desc=${el.description}&photo=${el.urlToImage}&src=${el.source.id}&cat=Crypto&url=${el.url}&time=${el.publishedAt.substring(0,10)}`);
+                    $('#supriseMe').html(`<img class="responsive-image" src="${el.urlToImage}"/><h1 class="uppercase ultrabold center-text half-bottom">${el.title}</h1><p class="center-text"> ${el.description} </p><div class="modal-buttons"><a href="${articleUrl}" class="close-menu half-bottom button button-center button-green button button-s button-round ultrabold uppercase">Read more</a></div>`);
+
+                }
+            });
+        });
 
        	//Get Related news from Newsapi.org for this user
         $.ajax({

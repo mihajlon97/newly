@@ -13,8 +13,8 @@ $(window).on('load',function() {
 });
 
 
-$(document).ready(function(){      
-    'use strict'	
+$(document).ready(function(){
+    'use strict'
 	function init_template(){
 		// Menus
 		setTimeout(function(){
@@ -64,7 +64,7 @@ $(document).ready(function(){
 				$('.delete-menu').addClass('delete-menu-active');
 			}
 		});
-		
+
 		$('.delete-menu, .close-menu').on('click', function(){
 			$(this).removeClass('perspective-delete');
 			$('.search-results').addClass('disabled-search-list');
@@ -100,11 +100,11 @@ $(document).ready(function(){
 		//Tabs
 		$('.active-tab').slideDown(0);
 		$('a[data-tab]').on( "click", function(){
-			var tab_number = $(this).data('tab'); 
+			var tab_number = $(this).data('tab');
 			$(this).parent().find('[data-tab]').removeClass('active-tab-button');
-			$(this).parent().parent().find('.tab-titles a').removeClass('active-tab-button'); 
-			$(this).addClass('active-tab-button'); 
-			$(this).parent().parent().find('.tab-item').slideUp(200); 
+			$(this).parent().parent().find('.tab-titles a').removeClass('active-tab-button');
+			$(this).addClass('active-tab-button');
+			$(this).parent().parent().find('.tab-item').slideUp(200);
 			$('#'+tab_number).slideDown(200);
 		});
 
@@ -149,7 +149,7 @@ $(document).ready(function(){
 		//Fullpage size
 		setTimeout(function(){resize_coverpage();},250);
 		$(window).on('resize', function(){resize_coverpage();})
-		
+
 		function resize_coverpage(){
 			var cover_height = $(window).height();
 			var cover_width = $(window).width();
@@ -158,8 +158,8 @@ $(document).ready(function(){
 			} else{
 				var header_height = "55";
 			}
-			
-			$('.cover-item').css({"height":(cover_height - header_height), "width":cover_width})			
+
+			$('.cover-item').css({"height":(cover_height - header_height), "width":cover_width})
 			$('.cover-item-full').css({"margin-top": header_height * (-1), "height":cover_height, "width":cover_width})
 			$('.coverpage-full .cover-item').css({"height":cover_height, "width":cover_width});
 			$('.coverpage-full').css({"margin-top": header_height * (-1)});
@@ -173,6 +173,11 @@ $(document).ready(function(){
 	}
 	//Activate all
 	setTimeout(init_template, 0);
+    var storage = window.localStorage;
+
+    $('#noprofile').click(function () {
+        storage.setItem('profile', false);
+    });
 });
 
 // Function for getting parameters from url
