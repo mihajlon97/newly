@@ -2,128 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="812e612b-fa47-4a87-bb5d-cbb6e4a0409c" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/Newly-debug.apk" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/.idea/workspace.xml" afterPath="$PROJECT_DIR$/platforms/android/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/article.html" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/article.html" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/home.html" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/home.html" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/10.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/10lq.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/10t.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/10w.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/1lq.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/1s.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/1t.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/1w.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/2lq.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/2s.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/2t.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/2w.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/3.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/3lq.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/3s.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/3t.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/3w.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/4.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/4lq.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/4s.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/4t.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/4w.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/5.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/5lq.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/5t.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/5w.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/6.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/6lq.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/6s.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/6w.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/7.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/7lq.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/7s.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/7t.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/7w.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/8.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/8lq.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/8t.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/8w.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/9.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/9lq.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/9s.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/9t.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/9w.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/images/pictures/bg10.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/login.html" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/login.html" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/profile.html" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/profile.html" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/register.html" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/register.html" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/scripts/custom.js" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/scripts/custom.js" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/mipmap-hdpi/icon.png" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/mipmap-hdpi/icon.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/mipmap-ldpi/icon.png" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/mipmap-ldpi/icon.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/mipmap-mdpi/icon.png" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/mipmap-mdpi/icon.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/mipmap-xhdpi/icon.png" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/mipmap-xhdpi/icon.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/mipmap-xxhdpi/icon.png" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/mipmap-xxhdpi/icon.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/res/mipmap-xxxhdpi/icon.png" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/res/mipmap-xxxhdpi/icon.png" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/config.xml" afterPath="$PROJECT_DIR$/platforms/browser/config.xml" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/article.html" afterPath="$PROJECT_DIR$/platforms/browser/www/article.html" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/config.xml" afterPath="$PROJECT_DIR$/platforms/browser/www/config.xml" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/home.html" afterPath="$PROJECT_DIR$/platforms/browser/www/home.html" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/10.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/10lq.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/10t.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/10w.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/1lq.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/1s.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/1t.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/1w.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/2lq.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/2s.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/2t.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/2w.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/3.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/3lq.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/3s.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/3t.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/3w.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/4.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/4lq.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/4s.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/4t.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/4w.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/5.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/5lq.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/5t.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/5w.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/6.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/6lq.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/6s.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/6w.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/7.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/7lq.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/7s.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/7t.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/7w.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/8.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/8lq.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/8t.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/8w.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/9.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/9lq.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/9s.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/9t.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/9w.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/images/pictures/bg10.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/login.html" afterPath="$PROJECT_DIR$/platforms/browser/www/login.html" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/manifest.json" afterPath="$PROJECT_DIR$/platforms/browser/www/manifest.json" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/profile.html" afterPath="$PROJECT_DIR$/platforms/browser/www/profile.html" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/register.html" afterPath="$PROJECT_DIR$/platforms/browser/www/register.html" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/scripts/custom.js" afterPath="$PROJECT_DIR$/platforms/browser/www/scripts/custom.js" />
-      <change beforePath="$PROJECT_DIR$/www/article.html" afterPath="$PROJECT_DIR$/www/article.html" />
-      <change beforePath="$PROJECT_DIR$/www/home.html" afterPath="$PROJECT_DIR$/www/home.html" />
-      <change beforePath="$PROJECT_DIR$/www/login.html" afterPath="$PROJECT_DIR$/www/login.html" />
-      <change beforePath="$PROJECT_DIR$/www/register.html" afterPath="$PROJECT_DIR$/www/register.html" />
-      <change beforePath="$PROJECT_DIR$/www/scripts/custom.js" afterPath="$PROJECT_DIR$/www/scripts/custom.js" />
+      <change beforePath="$PROJECT_DIR$/www/res/icon/android/drawable-hdpi-icon.png" afterPath="$PROJECT_DIR$/www/res/icon/android/drawable-hdpi-icon.png" />
+      <change beforePath="$PROJECT_DIR$/www/res/icon/android/drawable-ldpi-icon.png" afterPath="$PROJECT_DIR$/www/res/icon/android/drawable-ldpi-icon.png" />
+      <change beforePath="$PROJECT_DIR$/www/res/icon/android/drawable-mdpi-icon.png" afterPath="$PROJECT_DIR$/www/res/icon/android/drawable-mdpi-icon.png" />
+      <change beforePath="$PROJECT_DIR$/www/res/icon/android/drawable-xhdpi-icon.png" afterPath="$PROJECT_DIR$/www/res/icon/android/drawable-xhdpi-icon.png" />
+      <change beforePath="$PROJECT_DIR$/www/res/icon/android/drawable-xxhdpi-icon.png" afterPath="$PROJECT_DIR$/www/res/icon/android/drawable-xxhdpi-icon.png" />
+      <change beforePath="$PROJECT_DIR$/www/res/icon/android/drawable-xxxhdpi-icon.png" afterPath="$PROJECT_DIR$/www/res/icon/android/drawable-xxxhdpi-icon.png" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -140,8 +26,8 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="23">
-              <caret line="202" column="21" lean-forward="true" selection-start-line="202" selection-start-column="21" selection-end-line="202" selection-end-column="21" />
+            <state relative-caret-position="82">
+              <caret line="203" column="51" lean-forward="false" selection-start-line="203" selection-start-column="51" selection-end-line="203" selection-end-column="51" />
               <folding>
                 <marker date="1527891485220" expanded="true" signature="11495:11567" ph="..." />
               </folding>
@@ -458,7 +344,7 @@
       <workItem from="1527701280871" duration="27000" />
       <workItem from="1527703554981" duration="1774000" />
       <workItem from="1527790629946" duration="659000" />
-      <workItem from="1527869199900" duration="2933000" />
+      <workItem from="1527869199900" duration="3304000" />
     </task>
     <task id="LOCAL-00001" summary="hello world to Newly">
       <created>1526006435871</created>
@@ -467,17 +353,23 @@
       <option name="project" value="LOCAL" />
       <updated>1526006435872</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Suprise me feature -&gt; different article on action &quot;No thanks&quot;&#10;&#10;If &quot;Continue without account&quot; used, user icon hidden.">
+      <created>1527891603719</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1527891603719</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="142869000" />
+    <option name="totallyTimeSpent" value="143240000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="2762" height="1770" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15936106" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15936106" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -506,7 +398,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Init" />
     <MESSAGE value="hello world to Newly" />
-    <option name="LAST_COMMIT_MESSAGE" value="hello world to Newly" />
+    <MESSAGE value="Suprise me feature -&gt; different article on action &quot;No thanks&quot;&#10;&#10;If &quot;Continue without account&quot; used, user icon hidden." />
+    <option name="LAST_COMMIT_MESSAGE" value="Suprise me feature -&gt; different article on action &quot;No thanks&quot;&#10;&#10;If &quot;Continue without account&quot; used, user icon hidden." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -940,8 +833,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/www/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="202" column="21" lean-forward="true" selection-start-line="202" selection-start-column="21" selection-end-line="202" selection-end-column="21" />
+        <state relative-caret-position="82">
+          <caret line="203" column="51" lean-forward="false" selection-start-line="203" selection-start-column="51" selection-end-line="203" selection-end-column="51" />
           <folding>
             <marker date="1527891485220" expanded="true" signature="11495:11567" ph="..." />
           </folding>
