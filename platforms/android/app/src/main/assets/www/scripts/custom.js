@@ -36,6 +36,10 @@ $(document).ready(function(){
                 if(user.isAnonymous)
                     localStorage.setItem('profile', false);
                 else {
+                	if(!user.displayName)
+                        user.updateProfile({
+                            displayName: window.localStorage.getItem('userName')
+						});
                 	window.localStorage.setItem('userName', user.displayName);
                 	window.localStorage.setItem('userEmail', user.email);
 				}

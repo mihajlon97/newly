@@ -137,23 +137,34 @@
                 $('#error').show();
                 $('#error').html(errorMessage);
             } else {
+
                 firebase.auth().currentUser.updateProfile({
                     displayName: $('#name').val()});
-
-                var categories = ['Tech', 'Sport', 'Health'];
-                $.ajax({
-                    url: "https://newly-49f97.firebaseio.com/users",
-					method: "POST",
-					data: {
-                        id: firebase.auth().currentUser.uid,
-						categories: categories
-					},
-                    success: function(result) {
-						console.log(result);
-                    }
-                });
 			}
         });
+
+        window.localStorage.setItem('userName', $('#name').val());
+        window.localStorage.setItem('categories', categories);
+
+
+        var data = {"id": firebase.auth().currentUser.uid, "name": $('#name').val(), "categories": categories};
+        var categories = ['Tech', 'Sport', 'Health'];
+
+        $.ajax({
+            accept: "application/json",
+            url: "https://newly-49f97.firebaseio.com/users.json",
+            method: "POST",
+            data: JSON.stringify(data),
+            dataType: "json",
+            success: function(result) {
+                console.log(result);
+                conosle.log("TEBRA");
+            },
+            error: function (error) {
+                console.log("ERROR");
+            }
+        });
+
     });
 </script>
 </body>
