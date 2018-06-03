@@ -29,23 +29,18 @@
 					<em>(required)</em>
 				</div>
 				<div class="page-login-field">
-					<i class="fa fa-user"></i>
-					<input type="text" placeholder="Select a Username">
-					<em>(required)</em>
-				</div>
-				<div class="page-login-field">
 					<i class="fa fa-at"></i>
-					<input type="text" placeholder="Type your Email">
+					<input id="email" type="email" placeholder="Type your Email">
 					<em>(required)</em>
 				</div>
 				<div class="page-login-field">
 					<i class="fa fa-key"></i>
-					<input type="text" placeholder="Type your Password">
+					<input id="password1" type="password" placeholder="Type your Password">
 					<em>(required)</em>
 				</div>
 				<div class="page-login-field">
 					<i class="fa fa-key"></i>
-					<input type="text" placeholder="Retype your Password">
+					<input id="password2" type="password" placeholder="Retype your Password">
 					<em>(required)</em>
 				</div>
 				<div>
@@ -90,13 +85,13 @@
 						</div>
 					</div>
 				</div>
+					<p id="error" class="font-12" style="display:none; color: red;"></p>
 
-                    <div style="margin-left:44px; text-align: center!important; display: inline-block;" class="page-login-links">
+					<div style="margin-left:44px; text-align: center!important; display: inline-block;" class="page-login-links">
                         <p class="center-text" href="#">Already registered? <a href="login.html">Sign in here<a></a></p>
                         <div class="clear"></div>
                     </div>
-                    <a href="home.html" class="button button-blue button-full button-rounded button-s uppercase ultrabold">Register Account</a>
-
+                    <a id="register" href="home.html" class="button button-blue button-full button-rounded button-s uppercase ultrabold">Register Account</a>
                     <p class="center-text no-bottom" href="#"><a id="noprofile" href="home.html">Continue without account<a></a></p>
 			</div>
 			</div>
@@ -118,17 +113,47 @@
 	<a href="#" class="back-to-top-badge back-to-top-small"><i class="fa fa-angle-up"></i>Back to Top</a>
 </div>
 
-
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
 <script type="text/javascript" src="scripts/plugins.js"></script>
 
 <script>
-    //3 Categories per default checked for demo purposes
-    $(document).ready(function() {
-        $('#box1-fac-checkbox').click();
-        $('#box2-fac-checkbox').click();
-        $('#box3-fac-checkbox').click();
+    $('#register').click(function (e) {
+        $('#error').hide();
+        e.preventDefault();
+        if($('#password1').val() != $('#password2').val()){
+            $('#error').html('Password not same!');
+            return;
+		}
+
+        firebase.auth().createUserWithEmailAndPassword($('#email').val(), $('#password1').val()).catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.log(errorCode);
+            console.log(errorMessage);
+            if(errorMessage){
+                $('#error').show();
+                $('#error').html(errorMessage);
+            } else {
+                firebase.auth().currentUser.updateProfile({
+                    displayName: $('#name').val()});
+
+                var categories = ['Tech', 'Sport', 'Health'];
+                $.ajax({
+                    url: "https://newly-49f97.firebaseio.com/users",
+					method: "POST",
+					data: {
+                        id: firebase.auth().currentUser.uid,
+						categories: categories
+					},
+                    success: function(result) {
+						console.log(result);
+                    }
+                });
+			}
+        });
     });
 </script>
 </body>

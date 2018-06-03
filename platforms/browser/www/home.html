@@ -181,6 +181,7 @@
 	<a href="#" class="back-to-top-badge back-to-top-small"><i class="fa fa-angle-up"></i>Back to Top</a>
 </div>
 
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
 <script type="text/javascript" src="scripts/plugins.js"></script>
@@ -198,7 +199,6 @@
 
     $(document).ready(function() {
         var storage = window.localStorage;
-        console.log(storage.getItem('profile'));
 		if(storage.getItem('profile') == 'false'){
             $('#profile').hide();
             $('#loop').removeClass('header-icon-2')

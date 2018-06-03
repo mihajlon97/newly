@@ -25,12 +25,12 @@
 		<a href="home.html" class="header-icon back-button header-icon-1 font-10 no-border"><i class="fa fa-chevron-left"></i></a>
 	</div>
 
-	<div id="page-content" class="page-content">	
+	<div id="page-content" class="page-content">
 		<div id="page-content-scroll">
 			<div class="profile">
 				<img class="profile-image" src="images/pictures/no-profile.jpg" alt="img">
 				<div class="profile-body">
-					<h1 class="profile-heading">Newly User</h1>
+					<h1 id="namee" class="profile-heading">Newly User</h1>
 					<div class="full-top news-home">
 						<div class="news-tabs bg-white">
 							<a href="#" data-tab="user-tab-2" class="one-third center-text">Personal</a>
@@ -49,9 +49,8 @@
 							<div class="tab-item" id="user-tab-2">
 								<div class="content">
 									<h1 class="data-title color-blue-dark">Data</h1>
-									<div class="data-field"><strong>Name</strong><a href="#">Newly User</a><i class="fa fa-user"></i></div>
-									<div class="data-field"><strong>Username</strong><a href="#">newlyusername</a><i class="fa fa-user-circle"></i></div>
-									<div class="data-field"><strong>Email</strong><a href="#">newlyuser@gmail.com</a><i class="fa fa-envelope"></i></div>
+									<div class="data-field"><strong>Name</strong><a id="name" href="#">Newly User</a><i class="fa fa-user"></i></div>
+									<div class="data-field"><strong>Email</strong><a id="email" href="#">newlyuser@gmail.com</a><i class="fa fa-envelope"></i></div>
 
 									<h1 class="full-top data-title color-blue-dark">Categories</h1>
 									<div class="chips chips-large half-bottom">
@@ -128,12 +127,12 @@
 				<a href="#" class="footer-logo"></a>
 				<p>Hunt the truth! <br>All sources fetched from Newsapi.org</p>
 			</div>
-		</div>  
+		</div>
 	</div>
 	<a href="#" class="back-to-top-badge back-to-top-small"><i class="fa fa-angle-up"></i>Back to Top</a>
 </div>
-	
 
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
 <script type="text/javascript" src="scripts/plugins.js"></script>
@@ -154,6 +153,11 @@
     */
 
     $(document).ready(function() {
+        $('#namee').html(window.localStorage.getItem('userName'));
+        $('#name').html(window.localStorage.getItem('userName'));
+        $('#email').html(window.localStorage.getItem('userEmail'));
+
+
         //Get actual news in english from Newsapi.org - For demo at Saved Articles
         $.ajax({
             url: "https://newsapi.org/v2/top-headlines?country=us&language=en&apiKey=cc078c1c3a974f6dac7177de0a89e7a5",

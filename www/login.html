@@ -26,19 +26,20 @@
 				<p class="smaller-text half-bottom">Login now if you already have account!</p>
 				<div class="page-login-field half-top">
 					<i class="fa fa-user-circle"></i>
-					<input type="text" placeholder="Type your username or email">
+					<input id="email" type="email" placeholder="Type your email">
 					<em>(required)</em>
 				</div>
 				<div class="page-login-field">
 					<i class="fa fa-key"></i>
-					<input type="text" placeholder="Type your password">
+					<input id="password" type="password" placeholder="Type your password">
 					<em>(required)</em>
 				</div>
+				<p id="error" class="font-12" style="display:none; color: red;"></p>
 				<div class="page-login-links small-bottom">
 					<p class="forgot center-text" href="#"><i class="fa fa-user float-right"></i>Not registered? <a href="register.html">Sign up here<a></a></p>
 					<div class="clear"></div>
 				</div>
-				<a href="home.html" class="button button-blue button-full button-rounded button-s uppercase ultrabold">Login</a>
+				<a id="login" href="home.html" class="button button-blue button-full button-rounded button-s uppercase ultrabold">Login</a>
 				<p class="center-text no-bottom" href="#"><a id="noprofile" href="home.html">Continue without account<a></a></p>
 			</div>
 
@@ -54,8 +55,33 @@
 </div>
 
 
+<script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
 <script type="text/javascript" src="scripts/jquery.js"></script>
 <script type="text/javascript" src="scripts/custom.js"></script>
 <script type="text/javascript" src="scripts/plugins.js"></script>
 
+<script>
+
+    $('#noprofile').click(function (e) {
+        e.preventDefault();
+        firebase.auth().signInAnonymously().catch(function(error) {
+            var errorCode = error.code;
+            var errorMessage = error.message;
+        });
+    });
+
+    $('#login').click(function (e) {
+        $('#error').hide();
+        e.preventDefault();
+        firebase.auth().signInWithEmailAndPassword($('#email').val(), $('#password').val()).catch(function(error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            if(errorMessage){
+                $('#error').show();
+                $('#error').html(errorMessage);
+			}
+        });
+    });
+</script>
 </body>

@@ -16,6 +16,41 @@ $(window).on('load',function() {
 $(document).ready(function(){
     'use strict'
 	function init_template(){
+
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDISnXF3r9Kae3gxFV2EAQ8YTvLCdduiEg",
+            authDomain: "newly-49f97.firebaseapp.com",
+            databaseURL: "https://newly-49f97.firebaseio.com",
+            projectId: "newly-49f97",
+            storageBucket: "newly-49f97.appspot.com",
+            messagingSenderId: "655466437417"
+        };
+        firebase.initializeApp(config);
+
+
+        firebase.auth().onAuthStateChanged(function(user) {
+            var path = window.location.pathname;
+            var page = path.split("/").pop();
+            if (user) {
+                if(user.isAnonymous)
+                    localStorage.setItem('profile', false);
+                else {
+                	window.localStorage.setItem('userName', user.displayName);
+                	window.localStorage.setItem('userEmail', user.email);
+				}
+
+                if(page != 'home.html' && page != 'profile.html')
+                window.location.href = 'home.html';
+            } else {
+                if(page != 'login.html' && page != 'index.html' && page != 'register.html')
+                window.location.href = 'login.html';
+            }
+        });
+
+
+
+
 		// Menus
 		setTimeout(function(){
 			$('#header, .scale-hover').css('transition','all 350ms ease');
@@ -173,11 +208,6 @@ $(document).ready(function(){
 	}
 	//Activate all
 	setTimeout(init_template, 0);
-    var storage = window.localStorage;
-
-    $('#noprofile').click(function () {
-        storage.setItem('profile', false);
-    });
 });
 
 // Function for getting parameters from url
