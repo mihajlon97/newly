@@ -24,7 +24,9 @@
 		<a href="#" class="header-logo"></a>
 		<a href="javascript:;" class="header-icon header-icon-1 hamburger-animated" data-deploy-menu="menu-1"></a>
 		<a id="loop" href="#" class="header-icon header-icon-2 font-14 " data-deploy-menu="menu-2"><i class="fa fa-search"></i></a>
+		<!-- For play store without account
 		<a id="profile" href="profile.html" class="header-icon header-icon-4 font-14 no-border"><i class="fa fa-user"></i></a>
+		-->
 	</div>
 
     <!-- Sidebar Menu-->
@@ -44,7 +46,9 @@
 				<a href="query.html?q=style		"><i class="fa fa-camera"></i>					<em>Style 			</em></a>
 				<a href="javascript:;" data-deploy-menu="suprise-me" ><i class="fa fa-gift"></i><em>Suprise me 		</em></a>
 				<a href="sources.html"><i class="fa fa-bullhorn"></i>							<em>Sources 		</em></a>
+				<!-- For play store not important
 				<a href="weather.html"><i class="fa fa-sun-o"></i>								<em>Weather			</em></a>
+				-->
 				<a href="index.html"><i class="fa fa-star"></i>									<em>Tutorial 		</em></a>
 				<a href="#" class="close-menu"><i class="fa fa-times"></i>						<em>Close 			</em></a>
                 <div class="clear"></div>
@@ -107,8 +111,9 @@
 				</div>
 			</div>
 
-			<!-- Favourite Categories Tabs -->
+
 			<div class="news-home">
+				<!-- Favourite Categories Tabs
 				<div class="news-tabs bg-white">
 					<a href="javascript:;" data-tab="news-tab-1" class="one-third center-text">Tech</a>
 					<a href="javascript:;" data-tab="news-tab-2" class="one-third center-text active-tab-button">Health</a>
@@ -135,11 +140,12 @@
 						</div>
 					</div>
 				</div>
-
+				-->
 				<div class="decoration decoration-margins"></div>
-				<h3 class="center-text small-bottom"><i class="fa fa-bitcoin color-black icon-clear-right"></i>Because you read about Bitcoin</h3>
-				<div class="decoration decoration-margins"></div>
+				<h3 class="center-text small-bottom"><i class="fa fa-globe color-black icon-clear-right"></i>More popular news</h3>
 
+			</div>
+				<div class="decoration decoration-margins"></div>
 			</div>
 
 			<div class="decoration decoration-margins"></div>
@@ -230,6 +236,7 @@
 
         //Get categories news in english from Newsapi.org - Main news slider
 		//Categories are hardcoded for demo purposes. Database not yet implemented
+		/*
 		var categories = ["tech", "health", "sport"];
         categories.forEach(function (e) {
         	$.ajax({
@@ -248,28 +255,29 @@
         	});
         });
 
+		*/
 
-        //Crypto news - Hardcoded in section "Because user read about it"
+        //More feed news
         $.ajax({
-            url: "https://newsapi.org/v2/top-headlines?q=bitcoin&language=en&apiKey=cc078c1c3a974f6dac7177de0a89e7a5",
+            url: "https://newsapi.org/v2/top-headlines?language=en&apiKey=cc078c1c3a974f6dac7177de0a89e7a5",
             success: function(result){
                 var suprise = false;
                 var articleUrl;
                 result.articles.forEach(function (el) {
-                    articleUrl = encodeURI(`article.html?title=${el.title}&desc=${el.description}&photo=${el.urlToImage}&src=${el.source.id}&cat=Crypto&url=${el.url}&time=${el.publishedAt.substring(0,10)}`);
+                    articleUrl = encodeURI(`article.html?title=${el.title}&desc=${el.description}&photo=${el.urlToImage}&src=${el.source.id}&cat=Popular&url=${el.url}&time=${el.publishedAt.substring(0,10)}`);
                     if(!suprise){
                         suprise=true;
                         $('#supriseMe').html(`<img class="responsive-image" src="${el.urlToImage}"/><h1 class="uppercase ultrabold center-text half-bottom">${el.title}</h1><p class="center-text"> ${el.description} </p><div class="modal-buttons"><a href="${articleUrl}" class="close-menu half-bottom button button-center button-green button button-s button-round ultrabold uppercase">Read more</a></div>`);
                     }
-                    if(el.urlToImage != null && result.articles.indexOf(el) < 4)
-                        $('.news-home').append(`<div class="article-card box-shadow  bg-white full-bottom"><a href="${articleUrl}" class="article-header"><span class="article-overlay"></span><img class="article-image" src="${el.urlToImage}"/><span class="article-category bg-red-dark color-white uppercase">Crypto</span><span class="article-author color-gray-light"><i class="fa fa-user opacity-50"></i>${el.source.name}</span><span class="article-time color-gray-light">${el.publishedAt.substring(0, 10)}<i class="fa fa-clock-o opacity-50"></i></span></a><div class="article-content"><h1 class="article-title half-top">${el.title}</h1><p class="small-bottom">${el.description}</p><a href="${articleUrl}" class="half-bottom right-text">Read more <i class="fa fa-angle-right icon-clear-left icon-clear-right"></i></a></div></div>`);
+                    if(el.urlToImage != null && result.articles.indexOf(el) < 10)
+                        $('.news-home').append(`<div class="article-card box-shadow  bg-white full-bottom"><a href="${articleUrl}" class="article-header"><span class="article-overlay"></span><img class="article-image" src="${el.urlToImage}"/><span class="article-category bg-red-dark color-white uppercase">Popular</span><span class="article-author color-gray-light"><i class="fa fa-user opacity-50"></i>${el.source.name}</span><span class="article-time color-gray-light">${el.publishedAt.substring(0, 10)}<i class="fa fa-clock-o opacity-50"></i></span></a><div class="article-content"><h1 class="article-title half-top">${el.title}</h1><p class="small-bottom">${el.description}</p><a href="${articleUrl}" class="half-bottom right-text">Read more <i class="fa fa-angle-right icon-clear-left icon-clear-right"></i></a></div></div>`);
 				});
             }
         });
 
         $('#no-suprise').click(function () {
             $.ajax({
-                url: "https://newsapi.org/v2/top-headlines?q=bitcoin&language=en&apiKey=cc078c1c3a974f6dac7177de0a89e7a5",
+                url: "https://newsapi.org/v2/top-headlines?language=en&apiKey=cc078c1c3a974f6dac7177de0a89e7a5",
                 success: function(result){
                     shuffle(result.articles);
                     var articleUrl;

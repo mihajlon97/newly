@@ -48,16 +48,19 @@
 				<p class="articleDesc"></p>
 
 				<h4 class="float-left">Share this article</h4>
+				<!--
 				<h4 class="float-right">Save</h4>
+				-->
 				<br>
 				<div class="social-icons full-top half-bottom">
-					<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.newly.app/" class="icon icon-xs icon-circle facebook-bg"><i class="fa fa-facebook"></i></a>
-					<a target="_blank" href="https://twitter.com/home?status=Check%20out%20Newly%20http://www.newly.app" class="icon icon-xs icon-circle twitter-bg"><i class="fa fa-twitter"></i></a>
-					<a target="_blank" href="https://plus.google.com/share?url=http://www.newly.app" class="icon icon-xs icon-circle google-bg"><i class="fa fa-google-plus"></i></a>
-					<a target="_blank" href="http://pinterest.com/pin/create/button/?url=http://www.newly.app&media=www.newly.app&description=NewlyShareArticle" class="icon icon-xs icon-circle pinterest-bg"><i class="fa fa-pinterest-p"></i></a>
+					<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=" class="icon icon-xs icon-circle facebook-bg"><i class="fa fa-facebook"></i></a>
+					<a target="_blank" href="https://twitter.com/home?status=" class="icon icon-xs icon-circle twitter-bg"><i class="fa fa-twitter"></i></a>
+					<a target="_blank" href="https://plus.google.com/share?url=" class="icon icon-xs icon-circle google-bg"><i class="fa fa-google-plus"></i></a>
+					<a target="_blank" href="http://pinterest.com/pin/create/button/?url=&media=&description=Newly" class="icon icon-xs icon-circle pinterest-bg"><i class="fa fa-pinterest-p"></i></a>
+					<!-- For play store whatsapp and like not important
 					<a target="_blank" href="whatsapp://send" data-text="Check this out!" data-href="http://www.enableds.com" class="icon icon-xs icon-circle whatsapp-bg"><i class="fa fa-whatsapp"></i></a>
 					<a target="_blank" href="javascript:;" data-status="none" class="icon icon-xs float-right icon-circle google-bg saveArticle"><i class="fa fa-heart"></i></a>
-
+					-->
 				</div>
 			</div>
 
@@ -79,8 +82,10 @@
 					<i class="color-black fa fa-globe"></i>
 				</p>
 				<p class="no-bottom sourceDesc"> </p>
+				<!-- For play store without follow and block
 				<a href="javascript:;" data-status="unblock" class="uppercase blockSource small-top float-left bold button-xs button-round button-red">Block</a>
 				<a href="javascript:;" data-status="unfollow" class="uppercase followSource float-right small-top bold button-xs button-round button-blue">Follow</a>
+				-->
 			</div>
 
 			<div class="decoration decoration-margins"></div>
@@ -124,8 +129,6 @@
     */
 
     $(document).ready(function() {
-        var storage = window.localStorage;
-        console.log(storage.getItem('profile'));
         //Related news to this article
         $.ajax({
 			method: "GET",

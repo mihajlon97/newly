@@ -15,7 +15,10 @@ $(window).on('load',function() {
 
 $(document).ready(function(){
     'use strict'
-	function init_template(){
+    function init_template(){
+
+	/*
+		// For Play Store without users
 
         // Initialize Firebase
         var config = {
@@ -51,7 +54,7 @@ $(document).ready(function(){
                 window.location.href = 'login.html';
             }
         });
-
+		*/
 
 
 

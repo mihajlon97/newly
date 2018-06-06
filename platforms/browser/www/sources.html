@@ -17,7 +17,7 @@
 	<p>Hunt the truth!</p>
 	<em>We will keep you informed</em>
 </div>
-	
+
 <div id="page-transitions">
 
 	<!-- Header -->
@@ -64,14 +64,15 @@
             url: "https://newsapi.org/v2/sources?apiKey=cc078c1c3a974f6dac7177de0a89e7a5",
             success: function(result){
                 result.sources.forEach(function (el) {
-					$('#sources').append(`<div class="border-text border-blue-dark pointer"><h5 class="bold uppercase">${el.name}</h5><p class="small-text-icon smaller-text no-bottom"><i class="color-black fa fa-globe"></i> ${el.url} </p><p class="no-bottom"> ${el.description} </p><a href="javascript:;" data-status="unblock" class="uppercase blockSource small-top float-left bold button-xs button-round button-red">Block</a><a href="javascript:;" data-status="unfollow" class="uppercase followSource float-right small-top bold button-xs button-round button-blue">Follow</a></div><div class="decoration decoration-margins"></div>`);
+                    // Block and follow cut // <a href="javascript:;" data-status="unblock" class="uppercase blockSource small-top float-left bold button-xs button-round button-red">Block</a><a href="javascript:;" data-status="unfollow" class="uppercase followSource float-right small-top bold button-xs button-round button-blue">Follow</a>
+					$('#sources').append(`<div class="border-text border-blue-dark pointer"><h5 class="bold uppercase">${el.name}</h5><p class="small-text-icon smaller-text no-bottom"><i class="color-black fa fa-globe"></i> ${el.url} </p><p class="no-bottom"> ${el.description} </p></div><div class="decoration decoration-margins"></div>`);
                 });
 
 				setTimeout(function(){$("#preloader").addClass('hide-preloader');},250);
                 $('#preloader').addClass('hide-objects');
                 $('body').prepend('<div class="page-change-preloader preloader-bg"><div id="preload-spinner"></div></div>');
 
-
+/*
                 $('.blockSource').click(function () {
                     if($(this).data('status')!='block'){
                         $(this).html("Unblock");
@@ -100,6 +101,7 @@
                     }
 
                 });
+                */
             }
     	});
 	});
