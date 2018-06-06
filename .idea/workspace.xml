@@ -4,20 +4,8 @@
     <list default="true" id="812e612b-fa47-4a87-bb5d-cbb6e4a0409c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/article.html" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/article.html" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/home.html" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/home.html" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/index.html" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/index.html" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/scripts/custom.js" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/scripts/custom.js" />
-      <change beforePath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/sources.html" afterPath="$PROJECT_DIR$/platforms/android/app/src/main/assets/www/sources.html" />
       <change beforePath="$PROJECT_DIR$/platforms/browser/www/article.html" afterPath="$PROJECT_DIR$/platforms/browser/www/article.html" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/home.html" afterPath="$PROJECT_DIR$/platforms/browser/www/home.html" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/index.html" afterPath="$PROJECT_DIR$/platforms/browser/www/index.html" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/scripts/custom.js" afterPath="$PROJECT_DIR$/platforms/browser/www/scripts/custom.js" />
-      <change beforePath="$PROJECT_DIR$/platforms/browser/www/sources.html" afterPath="$PROJECT_DIR$/platforms/browser/www/sources.html" />
       <change beforePath="$PROJECT_DIR$/www/article.html" afterPath="$PROJECT_DIR$/www/article.html" />
-      <change beforePath="$PROJECT_DIR$/www/home.html" afterPath="$PROJECT_DIR$/www/home.html" />
-      <change beforePath="$PROJECT_DIR$/www/index.html" afterPath="$PROJECT_DIR$/www/index.html" />
-      <change beforePath="$PROJECT_DIR$/www/scripts/custom.js" afterPath="$PROJECT_DIR$/www/scripts/custom.js" />
-      <change beforePath="$PROJECT_DIR$/www/sources.html" afterPath="$PROJECT_DIR$/www/sources.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -63,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="article.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="article.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/www/article.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2301">
-              <caret line="130" column="34" lean-forward="false" selection-start-line="130" selection-start-column="34" selection-end-line="130" selection-end-column="34" />
+            <state relative-caret-position="-6353">
+              <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -122,7 +110,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="profile.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/www/profile.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="932">
@@ -231,10 +219,10 @@
         <option value="$PROJECT_DIR$/www/profile.html" />
         <option value="$PROJECT_DIR$/www/register.html" />
         <option value="$PROJECT_DIR$/www/scripts/custom.js" />
-        <option value="$PROJECT_DIR$/www/article.html" />
         <option value="$PROJECT_DIR$/www/home.html" />
         <option value="$PROJECT_DIR$/www/sources.html" />
         <option value="$PROJECT_DIR$/www/index.html" />
+        <option value="$PROJECT_DIR$/www/article.html" />
       </list>
     </option>
   </component>
@@ -363,7 +351,7 @@
       <workItem from="1527869199900" duration="4533000" />
       <workItem from="1527990644113" duration="6980000" />
       <workItem from="1528029653500" duration="1875000" />
-      <workItem from="1528306442475" duration="1789000" />
+      <workItem from="1528306442475" duration="3490000" />
     </task>
     <task id="LOCAL-00001" summary="hello world to Newly">
       <created>1526006435871</created>
@@ -400,11 +388,18 @@
       <option name="project" value="LOCAL" />
       <updated>1528031482101</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Everything with personalized content deleted and ready for play store">
+      <created>1528308242764</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1528308242765</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155113000" />
+    <option name="totallyTimeSpent" value="156814000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="2762" height="1770" extended-state="6" />
@@ -825,14 +820,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/www/article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2301">
-          <caret line="130" column="34" lean-forward="false" selection-start-line="130" selection-start-column="34" selection-end-line="130" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/sources.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -882,6 +869,14 @@
             <marker date="1527996085984" expanded="true" signature="6798:7081" ph="..." />
             <marker date="1527996085984" expanded="true" signature="6822:6892" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6353">
+          <caret line="136" column="0" lean-forward="false" selection-start-line="136" selection-start-column="0" selection-end-line="136" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

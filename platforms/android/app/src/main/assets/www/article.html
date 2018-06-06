@@ -53,10 +53,10 @@
 				-->
 				<br>
 				<div class="social-icons full-top half-bottom">
-					<a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=" class="icon icon-xs icon-circle facebook-bg"><i class="fa fa-facebook"></i></a>
-					<a target="_blank" href="https://twitter.com/home?status=" class="icon icon-xs icon-circle twitter-bg"><i class="fa fa-twitter"></i></a>
-					<a target="_blank" href="https://plus.google.com/share?url=" class="icon icon-xs icon-circle google-bg"><i class="fa fa-google-plus"></i></a>
-					<a target="_blank" href="http://pinterest.com/pin/create/button/?url=&media=&description=Newly" class="icon icon-xs icon-circle pinterest-bg"><i class="fa fa-pinterest-p"></i></a>
+					<a id="fbshare" target="_blank" 	 class="icon icon-xs icon-circle facebook-bg"><i class="fa fa-facebook"></i></a>
+					<a id="twittershare" target="_blank"  class="icon icon-xs icon-circle twitter-bg"><i class="fa fa-twitter"></i></a>
+					<a id="googleshare" target="_blank"  class="icon icon-xs icon-circle google-bg"><i class="fa fa-google-plus"></i></a>
+					<a id="pinterestshare" target="_blank"  class="icon icon-xs icon-circle pinterest-bg"><i class="fa fa-pinterest-p"></i></a>
 					<!-- For play store whatsapp and like not important
 					<a target="_blank" href="whatsapp://send" data-text="Check this out!" data-href="http://www.enableds.com" class="icon icon-xs icon-circle whatsapp-bg"><i class="fa fa-whatsapp"></i></a>
 					<a target="_blank" href="javascript:;" data-status="none" class="icon icon-xs float-right icon-circle google-bg saveArticle"><i class="fa fa-heart"></i></a>
@@ -129,6 +129,14 @@
     */
 
     $(document).ready(function() {
+
+        $('#fbshare').attr('href', 'https://www.facebook.com/sharer/sharer.php?u='+ getParameterByName('url'));
+        $('#twittershare').attr('href', 'https://plus.google.com/share?url='+ getParameterByName('url'));
+        $('#googleshare').attr('href', 'https://twitter.com/home?status=Newly Article: '+ getParameterByName('url'));
+        $('#pinterestshare').attr('href', 'http://pinterest.com/pin/create/button/?url='+ getParameterByName('url') +'&media=Newly&description=Newly Article');
+
+
+
         //Related news to this article
         $.ajax({
 			method: "GET",
